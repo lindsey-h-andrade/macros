@@ -5,7 +5,7 @@
 -- plug in your 2nd keyboard, load this script into LUAmacros, and press the triangle PLAY button.
 -- Then, press any key on that keyboard to assign logical name ('MACROS') to macro keyboard
 clear() --clear the console from last run
-local keyboardIdentifier = 'DD8D56B'
+local keyboardIdentifier = '7478A5B'
 
 
 
@@ -34,7 +34,7 @@ lmc.minimizeToTray = true
 --Start Script
 sendToAHK = function (key)
       --print('It was assigned string:    ' .. key)
-      local file = io.open("C:\\Users\\LindseyAndrade\\Desktop\\luamacros\\New folder\\keypressed.txt", "w") -- writing this string to a text file on disk is probably NOT the best method. Feel free to program something better!
+      local file = io.open("C:\\Users\\Lindsey\\Documents\\GitHub\\macros\\luamacros\\LTT Code\\keypressed.txt", "w") -- writing this string to a text file on disk is probably NOT the best method. Feel free to program something better!
       --If you didn't put your AutoHotKey scripts into C:/AHK, Make sure to substitute the path that leads to your own "keypressed.txt" file, using the double backslashes.
 	  --print("we are inside the text file")
       file:write(key)
