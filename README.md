@@ -5,6 +5,12 @@ Three files you actually need:
 - luamacros/LTT Code/2nd_keyboard_if_using_luamacros.ahk > autohotkey script that listens for the F24 key and then remaps to keys you actually have on the second keyboard and then makes them hotkeys 
 - luamacros/LTT Code/keypressed.txt > luamacros records which keys is pressed when the second keyboard is used. This is how the autohotkey script knows what key on the second keyboard was pressed to then map to a hotkey. 
 
+Things I probably need to fix: 
+- make the keypressed.txt file in a gitignore because it's always changing - that's the point of it.
+- a better way to actually input the hotkeys for a program. like a dictionary. not sure if AHK can do those 
+- restructure the folders (ie, remove LuaMacros.exe from git) 
+
+
 
 Links and things: 
 
