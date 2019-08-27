@@ -7,8 +7,10 @@ Menu, Tray, Icon,  calculator_icon.ico ; this changes the tray icon to a little 
 #SingleInstance force ;only one instance of this script may run at a time!
 #MaxHotkeysPerInterval 2000
 #WinActivateForce ;https://autohotkey.com/docs/commands/_WinActivateForce.htm
+; #Include, dictionarytest.ahk
+#Include, solidworksDictionary.ahk
 
-
+; dict := { "key1" : "value", "key2" : "value 2" } ;
 ;-------------2ND KEYBOARD USING LUAMACROS-----------------
 
 ; Use Window Spy to figure out window names
@@ -32,17 +34,17 @@ Menu, Tray, Icon,  calculator_icon.ico ; this changes the tray icon to a little 
 	If (key = "escape")
 	{
 	command = "Save"
-	Send ^s
+	Send % solidworksDictionary["save"]
 	}
 	else if (key = "tab")
 	{
 	command = "Zoom to Fit"
-	Send ^f
+	Send % solidworksDictionary["zoomFit"]
 	}
 	else if (key = "equals")
 	{
 	command = "Rebuild"
-	Send ^b
+	Send % solidworksDictionary["rebuild"]
 	}
 	else if (key = "numDiv")
 	{
@@ -135,6 +137,12 @@ Menu, Tray, Icon,  calculator_icon.ico ; this changes the tray icon to a little 
 	Return ;from luamacros F24
 
 #IfWinActive ;---- This will allow for everything below this line to work in ANY application.i love you
+	; Working example using dictionarytest.ahk
+	; ^j::
+	; Send % dict["key1"]
+	; ; Send ^+{Esc}
+	; return
+	
 	~F24::
 	FileRead, key, C:\Users\LindseyAndrade\Documents\Github\macros\luamacros\LTT Code\keypressed.txt
 	
