@@ -1,0 +1,17 @@
+solidworks := {
+    , "new" : "^n"
+    , "open" : "^o"
+    , "save" : "^s"
+    , "rebuild" : "^b"
+    , "zoomFit" : "^f"
+    , "showPlanes" : "+p"
+    , "showSketches" : "+t"
+    , "showSketchRelations" : "+r"
+    , "extrudeBoss" : "b"
+    , "extrudeCut" : "c"
+    , "fillet" : "f"
+    , "makePlane" : "g"
+    , "measure" : "m"
+    , "previousView" : "^+z"
+    , "showAllHidden" : "^+{Tab}"
+}
