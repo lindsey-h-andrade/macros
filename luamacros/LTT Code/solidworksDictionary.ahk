@@ -1,5 +1,4 @@
-solidworks := {
-    , "new" : "^n"
+solidworksDictionary := {"new" : "^n"
     , "open" : "^o"
     , "save" : "^s"
     , "rebuild" : "^b"
@@ -13,5 +12,4 @@ solidworks := {
     , "makePlane" : "g"
     , "measure" : "m"
     , "previousView" : "^+z"
-    , "showAllHidden" : "^+{Tab}"
-}
+    , "showAllHidden" : "^+{Tab}"}
