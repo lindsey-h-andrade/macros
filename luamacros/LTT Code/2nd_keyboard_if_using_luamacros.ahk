@@ -271,18 +271,24 @@ msgbox, you launched PRESET with the parameter %parameter%
 
 }
 
+	tippy(command) ;<--- this function will just launch a quick tooltip that shows you what key you pressed. OPTIONAL.
 
-recallTransition(parameter){
-msgbox, you launched recallTransition with the parameter %parameter%
-}
+	Return ;from luamacros F24
+	;THE BLOCK OF CODE ABOVE is the original, simple Luamacros-dependant script.
 
 
-copy(bar){
-msgbox, you launched COPY with the parameter %bar%
+	;;;ALL THE CODE BELOW CAN BE THE ACTUAL FUNCTIONS THAT YOU WANT TO CALL;;;
 
-}
 
-paste(foo){
-msgbox, you launched PASTE with the parameter %foo%
+	;;;;;;temporary tooltip maker;;;;;;
+	Tippy(tipsHere, wait:=333)
+	{
+	ToolTip, %tipsHere% TP,,,8
+	SetTimer, noTip, %wait% ;--in 1/3 seconds by default, remove the tooltip
+	}
+	noTip:
+		ToolTip,,,,8
+		;removes the tooltip
+	return
+	;;;;;;/temporary tooltip maker;;;;;;
 
-}

@@ -5,8 +5,7 @@
 -- plug in your 2nd keyboard, load this script into LUAmacros, and press the triangle PLAY button.
 -- Then, press any key on that keyboard to assign logical name ('MACROS') to macro keyboard
 clear() --clear the console from last run
-lmc.minimizeToTray = true
-local keyboardIdentifier = '884B96C3'
+local keyboardIdentifier = '7478A5B'
 
 
 
