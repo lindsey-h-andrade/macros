@@ -39,6 +39,115 @@ Menu, Tray, Icon,  calculator_icon.ico ; this changes the tray icon to a little 
 
 	Return
 
+#IfWinActive ahk_exe SLDWORKS.exe
+	~F24::
+	FileRead, key, C:\Users\Lindsey\Documents\GitHub\macros\luamacros\LTT Code\keypressed.txt
+
+	If (key = "escape")
+	{
+	command = "Save"
+	Send ^s
+	}
+	else if (key = "tab")
+	{
+	command = "Zoom to Fit"
+	Send ^f
+	}
+	else if (key = "equals")
+	{
+	command = "Rebuild"
+	Send ^b
+	}
+	else if (key = "numDiv")
+	{
+	command = ""
+	Send /
+	}
+	else if (key = "numMult")
+	{
+	command = ""
+	Send *
+	}
+	else if (key = "backspace")
+	{
+	command = ""
+	Send 00
+	}
+	else if (key = "num7")
+	{
+	command = "View: Planes"
+	Send +p
+	}
+	else if (key = "num8")
+	{
+	command = "View: Sketches"
+	Send +t
+	}
+	else if (key = "num9")
+	{
+	command = "View: Sketch Relations"
+	Send +r
+	}
+	else if (key = "numMinus")
+	{
+	command = "Normal To"
+	Send n
+	}
+	else if (key = "num4")
+	{
+	command = "Fillet"
+	Send f
+	}
+	else if (key = "num5")
+	{
+	command = "Reference Plane"
+	Send g
+	}
+	else if (key = "num6")
+	{
+	command = "Mirror"
+	Send +m
+	}
+	else if (key = "numPlus")
+	{
+	command = "Measure"
+	Send m
+	}
+	else if (key = "num1")
+	{
+	command = "Extrude Cut"
+	Send c
+	}
+	else if (key = "num2")
+	{
+	command = "Extrude Boss"
+	Send b
+	}
+	else if (key = "num3")
+	{
+	command = ""
+	Send 3
+	}
+	else if (key = "enter")
+	{
+	command = "Enter"
+	Send {Enter}
+	}
+	else if (key = "num0")
+	{
+	command = "Escape"
+	Send {Esc}
+	}
+	else if (key = "numDelete")
+	{
+	command = "Delete"
+	Send {Delete}
+	}
+
+	tippy(command) ;<--- this function will just launch a quick tooltip that shows you what key you pressed. OPTIONAL.
+
+	Return ;from luamacros F24
+
 #IfWinActive ;---- This will allow for everything below this line to work in ANY application.
 	~F24::
 	FileRead, key, C:\Users\LindseyAndrade\Documents\Github\macros\luamacros\LTT Code\keypressed.txt
