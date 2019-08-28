@@ -25,16 +25,19 @@ Menu, Tray, Icon,  calculator_icon.ico ; this changes the tray icon to a little 
 	else if (key = "tab")
 	Send v
 
+	else if (key = "numDelete") 
+	Send {Delete}
+
 	Return
 
-#IfWinActive ahk_exe SLDWORKS.exe
+#IfWinActive ahk_exe sldworks.exe
 	~F24::
-	FileRead, key, C:\Users\Lindsey\Documents\GitHub\macros\luamacros\LTT Code\keypressed.txt
+	FileRead, key, C:\Users\LindseyAndrade\Documents\Github\macros\luamacros\LTT Code\keypressed.txt
 
 	If (key = "escape")
 	{
-	command = "Save"
 	Send % solidworksDictionary["save"]
+	MsgBox, 0, AHK Script, File Saved, 0.5
 	}
 	else if (key = "tab")
 	{
